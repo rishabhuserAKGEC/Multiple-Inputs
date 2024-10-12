@@ -26,9 +26,10 @@
     </style>
 </head>
 <body>
-    <input type="text" name="" id="firstName" placeholder="Enter First Name" onchange="updateFullName()">
-    <input type="text" name="" id="lastName" placeholder="Enter Last Name" onchange="updateFullName()">
-
+    
+    <input type="text" name="" id="firstName" placeholder="Enter First Name" oninput="updateFullName()">
+    <input type="text" name="" id="lastName" placeholder="Enter Last Name" oninput="updateFullName()">
+    
     <h1 id="fullName">-</h1>
     <script>
 
@@ -37,7 +38,7 @@
             const lastName=document.getElementById("lastName").value;
             document.getElementById("fullName").textContent=`${firstName}-${lastName}`;
         }
-
+        
     </script>
 </body>
 </html>
