@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1{
+            font-size: 32px;
+            margin-top: 20px;
+        }
+        input{
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="firstName" placeholder="Enter First Name" onchange="updateFullName()">
+    <input type="text" name="" id="lastName" placeholder="Enter Last Name" onchange="updateFullName()">
+
+    <h1 id="fullName">-</h1>
+    <script>
+
+        function updateFullName(){
+            const firstName=document.getElementById('firstName').value;
+            const lastName=document.getElementById("lastName").value;
+            document.getElementById("fullName").textContent=`${firstName}-${lastName}`;
+        }
+        /*
+        <!-- firstNameInput.addEventListener('input',updateFullName);
+        lastNameInput.addEventListener('input',updateFullName);
+        */
+
+    </script>
+</body>
+</html>
